@@ -1,0 +1,13 @@
+/* custom-slider.css */
+/* Change the color property to your desired dot color */
+.slick-dots li button:before {
+    color: #F9004D; /* Replace with your desired color */
+  }
+  
+  /* Modify other dot styles as needed */
+  .slick-dots li.slick-active button:before {
+    color: #F9004D; /* Replace with your desired active dot color */
+  }
+  
+  /* Add any other custom dot styles here */
+  

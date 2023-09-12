@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-stroke {
+  -webkit-text-stroke: 1px #4d4d4d;
+}
+
+.underline {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 16px; /* Equivalent to text-base in Tailwind */
+  line-height: 1.75; /* Equivalent to leading-7 in Tailwind */
+  letter-spacing: 0.02em; /* Equivalent to tracking-wide in Tailwind */
+  margin-top: 1rem; /* Equivalent to mt-1 in Tailwind */
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  width: 0;
+  height: 1px; /* Equivalent to after:h-px in Tailwind */
+  background-color: #000; /* Equivalent to after:bg-black in Tailwind */
+  opacity: 0.4; /* Equivalent to after:opacity-40 in Tailwind */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 1s ease; /* Equivalent to duration-1000 in Tailwind */
+}
+.underline:hover::after {
+  width: 115px; /* Equivalent to hover:after:w-[115px] in Tailwind */
+}
+
+.animation {
+  display: inline-block;
+  border-right: 5px solid transparent; /* Start with a transparent border */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0; /* Start with a width of 0 */
+  animation: typing 4s forwards, cursor 0.5s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  100% {
+    width: 100%; /* End with full width */
+  }
+}
+
+
+
